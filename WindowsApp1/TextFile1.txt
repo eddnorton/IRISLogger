@@ -1,0 +1,32 @@
+﻿Dim filepath As String = "E:\SSB\ssbintro18.mp3" 'IO.Path.Combine(Application.StartupPath, "filename.ext")
+        Dim url As String = "https://api.mixcloud.com//upload/?access_token=965xPgBXJgCRn62FkvbZ3AHze4ub5zKH"
+
+        Dim boundary As String = "--" 'IO.Path.GetRandomFileName
+        Dim header As New System.Text.StringBuilder()
+        header.AppendFormat(IO.Path.GetFileName(filepath))
+        header.AppendLine("name=Upload")
+        header.AppendLine("tags-0-tag=Test")
+        header.AppendLine("sections-0-artist=Artist Name")
+        header.AppendLine("sections-0-song=Song Title")
+        header.AppendLine("sections-0-start_time=1")
+
+        Dim headerbytes() As Byte = System.Text.Encoding.UTF8.GetBytes(header.ToString)
+        Dim endboundarybytes() As Byte = System.Text.Encoding.ASCII.GetBytes(vbNewLine & "--" & boundary & "--" & vbNewLine)
+
+        Dim req As Net.HttpWebRequest = Net.HttpWebRequest.Create(url)
+
+        Dim s As IO.Stream
+        s.Write(headerbytes, 0, headerbytes.Length)
+        Dim filebytes() As Byte = ReadAllBytes(filepath)
+        s.Write(filebytes, 0, filebytes.Length)
+        s.Write(endboundarybytes, 0, endboundarybytes.Length)
+        s.Close()
+        ' postdatabytes = enc.GetBytes(postdata)
+        's.Method = "POST"
+        's.ContentType = "application/x-www-form-urlencoded"
+        's.ContentLength = postdatabytes.Length
+
+        'Using stream = s.GetRequestStream()
+        'stream.Write(postdatabytes, 0, postdatabytes.Length)
+        'End Using
+        'Dim result = s.GetResponse()

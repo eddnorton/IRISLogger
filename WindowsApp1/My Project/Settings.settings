@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Edd\Documents\New Meditations</Value>
+    </Setting>
+    <Setting Name="MixcloudKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MixcloudTag0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sra</Value>
+    </Setting>
+    <Setting Name="MixcloudTag1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ussu</Value>
+    </Setting>
+    <Setting Name="MixcloudTag2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">shockradio</Value>
+    </Setting>
+    <Setting Name="MixcloudTag3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">studentradio</Value>
+    </Setting>
+    <Setting Name="MixcloudToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="fullLogLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
